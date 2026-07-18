@@ -12,7 +12,7 @@ const translations = {
       photo: "Portrait reserved",
       role: "Machine Learning PhD · Research Engineer"
     },
-    themes: { worldModels: "World models", multivariate: "Multivariate time series", multimodal: "Multimodal time series", ai4science: "AI for science", dynamics: "Learning dynamics", reconstruction: "3D state reconstruction" },
+    themes: { worldModels: "World models", multivariate: "Multivariate time series", multimodal: "Multimodal representation", ai4science: "AI for science", dynamics: "Learning dynamics", reconstruction: "High-dimensional state reconstruction" },
     research: {
       eyebrow: "Selected systems",
       title: "Research that moves between <em>representation</em> and <em>reality.</em>",
@@ -26,10 +26,9 @@ const translations = {
     experience: {
       eyebrow: "Trajectory", title: "From physical systems to <em>learning systems.</em>", research: "Research & industry", education: "Education",
       ucl: { date: "2024 — Present", role: "Researcher · Dynamic Systems Lab, UCL", desc: "Leading AI4Science datasets and methodology benchmarks; publishing and maintaining PFNN, Chaos Meets Attention, and MMPD-Bench." },
-      swerim: { role: "Research Assistant · Swerim AB", desc: "Built an AI predictive agent and full data pipeline for process-gas management in steel manufacturing." },
+      swerim: { role: "Research Assistant · Swerim AB", desc: "Built a <strong class=\"trajectory-highlight\">(multivariate) AI predictive agent</strong> and full data pipeline for process-gas management in steel manufacturing." },
       ms: { role: "Software Engineer Track · Morgan Stanley UK", desc: "Developed recommender systems, account databases, web applications, and backend programs in an agile workflow." },
-      rsm: { role: "Risk Advisory · RSM UK", desc: "Delivered data analytics and risk advisory work for UK public-sector clients." },
-      msc: { role: "MSc Research · UCL AI Centre", desc: "Designed a graphical model for maximum-entropy variational reinforcement learning, advised by Prof. David Barber." },
+      msc: { role: "MSc Research · UCL AI Centre", desc: "Designed a graphical model for <strong class=\"trajectory-highlight\">policy maximum-entropy variational reinforcement learning (RL)</strong>, advised by Prof. David Barber." },
       glasgow: { role: "Summer Research · University of Glasgow", desc: "Explored signal imaging for human-gesture identification using SPFT and deep-learning classification." }
     },
     education: {
@@ -63,7 +62,7 @@ const translations = {
       photo: "头像预留区",
       role: "机器学习博士 · 研究工程师"
     },
-    themes: { worldModels: "世界模型", multivariate: "多变量时序", multimodal: "多模态时序", ai4science: "科学智能", dynamics: "动力学学习", reconstruction: "三维状态重建" },
+    themes: { worldModels: "世界模型", multivariate: "多变量时序", multimodal: "多模态表征", ai4science: "科学智能", dynamics: "动力学学习", reconstruction: "高维状态重建" },
     research: {
       eyebrow: "代表性研究系统",
       title: "在<em>表征</em>与<em>真实世界</em>之间穿行的研究。",
@@ -77,10 +76,9 @@ const translations = {
     experience: {
       eyebrow: "研究轨迹", title: "从物理系统走向<em>学习系统。</em>", research: "科研与产业经历", education: "教育经历",
       ucl: { date: "2024 — 至今", role: "研究员 · UCL 动态系统实验室", desc: "主导 AI4Science 数据集与方法基准，发布并维护 PFNN、Chaos Meets Attention 和 MMPD-Bench。" },
-      swerim: { role: "研究助理 · 瑞典金属研究院 Swerim", desc: "为钢铁制造过程气体管理构建 AI 预测智能体与完整数据管线。" },
+      swerim: { role: "研究助理 · 瑞典金属研究院 Swerim", desc: "为钢铁制造过程气体管理构建<strong class=\"trajectory-highlight\">（多变量）AI 预测智能体</strong>与完整数据管线。" },
       ms: { role: "软件工程师方向 · 摩根士丹利英国", desc: "在敏捷开发流程中完成推荐系统、账户数据库、Web 应用与后端程序。" },
-      rsm: { role: "风险咨询 · RSM 英国", desc: "为英国公共部门客户提供数据分析与风险咨询服务。" },
-      msc: { role: "硕士研究 · UCL 人工智能中心", desc: "在 David Barber 教授指导下，为最大熵变分强化学习设计图模型。" },
+      msc: { role: "硕士研究 · UCL 人工智能中心", desc: "在 David Barber 教授指导下，为<strong class=\"trajectory-highlight\">策略最大熵变分强化学习（RL）</strong>设计图模型。" },
       glasgow: { role: "暑期研究 · 格拉斯哥大学", desc: "使用 SPFT 信号成像与深度学习分类研究人体手势识别。" }
     },
     education: {
@@ -115,7 +113,7 @@ function setLanguage(language) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const translation = getTranslation(activeLanguage, element.dataset.i18n);
     if (translation === undefined) return;
-    if (translation.includes("<em>")) element.innerHTML = translation;
+    if (translation.includes("<em>") || translation.includes("<strong")) element.innerHTML = translation;
     else element.textContent = translation;
   });
 
@@ -189,5 +187,5 @@ if ("IntersectionObserver" in window) {
 const savedLanguage = localStorage.getItem("yi-he-language");
 const preferredLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
 setLanguage(savedLanguage || preferredLanguage);
-document.querySelector('[data-filter="featured"]').click();
+document.querySelector('[data-filter="all"]').click();
 document.querySelector("#current-year").textContent = new Date().getFullYear();

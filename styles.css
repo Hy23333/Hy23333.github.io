@@ -398,7 +398,7 @@ svg {
 }
 
 .headshot-slot {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   overflow: hidden;
   background:
     linear-gradient(135deg, transparent 49.8%, rgba(20, 25, 37, 0.08) 50%, transparent 50.2%),
@@ -411,6 +411,12 @@ svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.timeline-copy .trajectory-highlight {
+  color: var(--cobalt);
+  font-weight: 700;
+  box-shadow: inset 0 -0.28em 0 rgba(47, 82, 208, 0.13);
 }
 
 .portrait-note {

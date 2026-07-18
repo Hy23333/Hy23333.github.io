@@ -10,8 +10,8 @@
     <meta name="theme-color" content="#f4f0e7" />
     <title>Yi He — AI for Dynamical Systems</title>
     <script>document.documentElement.classList.add("js");</script>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260719" />
+    <script src="script.js?v=20260719" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -83,8 +83,9 @@
 
         <aside class="hero-profile reveal" aria-label="Profile summary">
           <div class="headshot-frame">
-            <div class="headshot-slot" role="img" aria-label="Headshot placeholder"></div>
-            <span class="portrait-note" data-i18n="hero.photo">Portrait reserved</span>
+            <div class="headshot-slot">
+              <img src="assets/headshot.png" alt="Portrait of Yi He" />
+            </div>
           </div>
           <div class="profile-caption">
             <div>
@@ -204,8 +205,8 @@
             <div>
               <h2 data-i18n="publications.title">Publications</h2>
               <div class="publication-filter" role="group" aria-label="Publication filter">
-                <button class="is-active" type="button" data-filter="featured" aria-pressed="true" data-i18n="publications.highlighted">Highlighted</button>
-                <button type="button" data-filter="all" aria-pressed="false" data-i18n="publications.all">Full list</button>
+                <button class="is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="publications.all">Full list</button>
+                <button type="button" data-filter="featured" aria-pressed="false" data-i18n="publications.highlighted">Highlighted</button>
               </div>
             </div>
           </div>
@@ -335,7 +336,7 @@
               <div class="timeline-date">2022 — 2024</div>
               <div class="timeline-copy">
                 <h4 data-i18n="experience.swerim.role">Research Assistant · Swerim AB</h4>
-                <p data-i18n="experience.swerim.desc">Built an AI predictive agent and full data pipeline for process-gas management in steel manufacturing.</p>
+                <p data-i18n="experience.swerim.desc">Built a <strong class="trajectory-highlight">(multivariate) AI predictive agent</strong> and full data pipeline for process-gas management in steel manufacturing.</p>
               </div>
             </article>
 
@@ -348,18 +349,10 @@
             </article>
 
             <article class="timeline-item">
-              <div class="timeline-date">2022</div>
-              <div class="timeline-copy">
-                <h4 data-i18n="experience.rsm.role">Risk Advisory · RSM UK</h4>
-                <p data-i18n="experience.rsm.desc">Delivered data analytics and risk advisory work for UK public-sector clients.</p>
-              </div>
-            </article>
-
-            <article class="timeline-item">
               <div class="timeline-date">2021</div>
               <div class="timeline-copy">
                 <h4 data-i18n="experience.msc.role">MSc Research · UCL AI Centre</h4>
-                <p data-i18n="experience.msc.desc">Designed a graphical model for maximum-entropy variational reinforcement learning, advised by Prof. David Barber.</p>
+                <p data-i18n="experience.msc.desc">Designed a graphical model for <strong class="trajectory-highlight">policy maximum-entropy variational reinforcement learning (RL)</strong>, advised by Prof. David Barber.</p>
               </div>
             </article>
 
