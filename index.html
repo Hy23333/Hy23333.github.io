@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yi He — UCL PhD researcher working on world models, multivariate and multimodal time-series forecasting, dynamical systems, and AI for science."
+    />
+    <meta name="theme-color" content="#f4f0e7" />
+    <title>Yi He — AI for Dynamical Systems</title>
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="styles.css?v=20260719b" />
+    <script src="script.js?v=20260719" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Yi He — home">
+        <span class="wordmark-mark" aria-hidden="true">YH</span>
+        <span class="wordmark-name">Yi He <em>何怡</em></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#research" data-i18n="nav.research">Research</a>
+        <a href="#publications" data-i18n="nav.publications">Publications</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#talks" data-i18n="nav.talks">Talks</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="cv-link" href="assets/Yi_He_CV_2026.pdf" target="_blank" rel="noreferrer">
+          <span data-i18n="nav.cv">CV</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3m0 0H6m7 0v7" /></svg>
+        </a>
+        <div class="language-switcher" role="group" aria-label="Language">
+          <button type="button" class="language-option is-active" data-language="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" class="language-option" data-language="zh" aria-pressed="false">中</button>
+        </div>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="sr-only" data-i18n="nav.menu">Menu</span>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a href="#research" data-i18n="nav.research">Research</a>
+        <a href="#publications" data-i18n="nav.publications">Publications</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#talks" data-i18n="nav.talks">Talks</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">Hello, I’m</span></p>
+          <h1>
+            <span data-i18n="hero.name">Yi He</span>
+            <em data-i18n="hero.nativeName">何怡</em>
+          </h1>
+          <div class="hero-bio">
+            <p class="hero-status" data-i18n="hero.status">I am currently a PhD student in AI for Dynamical Systems at University College London, expecting to graduate in 2027–2028. I also work as a research engineer in UCL’s Dynamic Systems Lab.</p>
+            <p class="hero-intro" data-i18n="hero.intro">My research focuses on world models and multivariate / multimodal time-series forecasting, with broader interests in efficient multimodal representation, 3D state reconstruction, learning dynamics, and temporally consistent video generation.</p>
+          </div>
+          <div class="hero-topics" aria-label="Research interests">
+            <span data-i18n="themes.worldModels">World models</span>
+            <span data-i18n="themes.multivariate">Multivariate time series</span>
+            <span data-i18n="themes.multimodal">Multimodal time series</span>
+            <span data-i18n="themes.ai4science">AI for science</span>
+          </div>
+          <div class="hero-links">
+            <a class="primary-link" href="#research">
+              <span data-i18n="hero.work">Explore my work</span>
+              <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h12m-5-5 5 5-5 5" /></svg>
+            </a>
+            <a href="mailto:heylly525@gmail.com">Email</a>
+            <a href="https://scholar.google.com/citations?user=l5goG-YAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+          </div>
+        </div>
+
+        <aside class="hero-profile reveal" aria-label="Profile summary">
+          <div class="headshot-frame">
+            <div class="headshot-slot">
+              <img src="assets/headshot.png" alt="Portrait of Yi He" />
+            </div>
+          </div>
+          <div class="profile-caption">
+            <div>
+              <strong>Yi He</strong>
+              <span>何怡</span>
+            </div>
+            <p data-i18n="hero.role">Machine Learning PhD · Research Engineer</p>
+          </div>
+        </aside>
+
+        <div class="hero-orbit" aria-hidden="true">
+          <svg viewBox="0 0 420 420">
+            <circle cx="210" cy="210" r="145" />
+            <circle cx="210" cy="210" r="102" />
+            <path d="M48 232c69-85 134-123 199-112 51 9 92 53 125 132" />
+            <path d="M72 306c82-64 168-81 257-50" />
+            <circle class="orbit-node orbit-node-one" cx="326" cy="126" r="8" />
+            <circle class="orbit-node orbit-node-two" cx="104" cy="302" r="6" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="research-strip" aria-label="Research themes">
+        <div class="research-strip-track">
+          <span data-i18n="themes.worldModels">World models</span><i></i><span data-i18n="themes.multivariate">Multivariate time series</span><i></i><span data-i18n="themes.multimodal">Multimodal time series</span><i></i><span data-i18n="themes.dynamics">Learning dynamics</span><i></i><span data-i18n="themes.reconstruction">3D state reconstruction</span><i></i>
+          <span aria-hidden="true" data-i18n="themes.worldModels">World models</span><i aria-hidden="true"></i><span aria-hidden="true" data-i18n="themes.multivariate">Multivariate time series</span><i aria-hidden="true"></i><span aria-hidden="true" data-i18n="themes.multimodal">Multimodal time series</span><i aria-hidden="true"></i><span aria-hidden="true" data-i18n="themes.dynamics">Learning dynamics</span><i aria-hidden="true"></i><span aria-hidden="true" data-i18n="themes.reconstruction">3D state reconstruction</span><i aria-hidden="true"></i>
+        </div>
+      </section>
+
+      <section id="research" class="section-shell research-section">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-index">01</span>
+            <p class="eyebrow" data-i18n="research.eyebrow">Selected systems</p>
+          </div>
+          <h2 data-i18n="research.title">Research that moves between <em>representation</em> and <em>reality.</em></h2>
+        </div>
+
+        <div class="featured-projects">
+          <article class="project-card project-card-large reveal">
+            <div class="project-visual polar-visual" aria-hidden="true">
+              <div class="polar-grid">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <svg viewBox="0 0 320 210">
+                <path d="M42 112c38-75 89-85 128-28s78 58 112-21" />
+                <path d="M43 147c44-22 83-22 118 0 48 31 80 22 116-26" />
+                <circle cx="163" cy="106" r="54" />
+              </svg>
+              <span class="visual-code">S₀ → S₁, S₂, S₃</span>
+            </div>
+            <div class="project-copy">
+              <div class="project-meta"><span>ICML 2026</span><span data-i18n="research.project1.tag">Multimodal benchmark</span></div>
+              <h3>MMPD-Bench</h3>
+              <p data-i18n="research.project1.desc">A benchmark that bridges multimodal fission through multi-polarimetric modality decomposition, with a public dataset and project ecosystem for the AI4Science community.</p>
+              <div class="project-links">
+                <a href="https://mmpdbench.github.io/" target="_blank" rel="noreferrer" data-i18n="common.project">Project</a>
+                <a href="https://huggingface.co/datasets/HY2333/MMPD_Bench" target="_blank" rel="noreferrer" data-i18n="common.dataset">Dataset</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual chaos-visual" aria-hidden="true">
+              <svg viewBox="0 0 320 210">
+                <defs><linearGradient id="chaos-gradient" x1="0" x2="1"><stop stop-color="#ff6b4a" /><stop offset="1" stop-color="#3154d8" /></linearGradient></defs>
+                <path class="chaos-line" d="M24 110c18-70 42 82 61 9s36-69 57 6 41 68 61-3 37-75 55-8 26 51 39-27" />
+                <path class="chaos-ghost" d="M24 127c20-44 36 40 56 7s42-52 64 0 42 43 63-5 40-46 58-2 23 35 31-4" />
+                <line x1="24" y1="172" x2="298" y2="172" />
+              </svg>
+              <span class="visual-code">x<tspan>t+1</tspan> = F(x<tspan>t</tspan>)</span>
+            </div>
+            <div class="project-copy">
+              <div class="project-meta"><span>ICML 2025</span><span data-i18n="research.project2.tag">Dynamical prediction</span></div>
+              <h3>Chaos Meets Attention</h3>
+              <p data-i18n="research.project2.desc">Transformers for large-scale multivariate spatiotemporal prediction, supported by high-resolution turbulent channel and Kolmogorov flow benchmarks.</p>
+              <div class="project-links">
+                <a href="https://github.com/Hy23333/ChaosMeetsAttention" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://rdr.ucl.ac.uk/articles/dataset/Benchmark_dataset_Turbulent_Channel_Flow_for_Chaos_Meets_Attention_Transformers_for_Large-Scale_Dynamical_Prediction/29118212" target="_blank" rel="noreferrer" data-i18n="common.dataset">Dataset</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual industry-visual">
+              <img src="assets/intelligent-steel-systems.png" alt="Aerial view of a European steel-making facility by the coast" />
+              <span class="visual-code">LIVE · PREDICT · OPTIMISE</span>
+            </div>
+            <div class="project-copy">
+              <div class="project-meta"><span>AEI 2026</span><span data-i18n="research.project3.tag">Industrial AI</span></div>
+              <h3 data-i18n="research.project3.title">Intelligent Steel Systems</h3>
+              <p data-i18n="research.project3.desc">An end-to-end predictive pipeline for process-gas management—from forecasting and storage to real-time front-end reporting.</p>
+              <div class="project-links"><span data-i18n="research.project3.outcome">Journal article · CiteScore 15.8</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="research-stats reveal">
+          <div><strong>2TB+</strong><span data-i18n="research.stats.data">research data generated & maintained</span></div>
+          <div><strong>3</strong><span data-i18n="research.stats.lead">ICML / ICLR papers led</span></div>
+          <div><strong>6+</strong><span data-i18n="research.stats.talks">invited and conference talks</span></div>
+          <div><strong>2027–28</strong><span data-i18n="research.stats.phd">expected PhD graduation</span></div>
+        </div>
+      </section>
+
+      <section id="publications" class="publication-section">
+        <div class="section-shell">
+          <div class="section-heading publication-heading reveal">
+            <div>
+              <span class="section-index">02</span>
+              <p class="eyebrow" data-i18n="publications.eyebrow">Research output</p>
+            </div>
+            <div>
+              <h2 data-i18n="publications.title">Publications</h2>
+              <div class="publication-filter" role="group" aria-label="Publication filter">
+                <button class="is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="publications.all">Full list</button>
+                <button type="button" data-filter="featured" aria-pressed="false" data-i18n="publications.highlighted">Highlighted</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="publication-list">
+            <article class="publication-item reveal" data-featured="true">
+              <span class="publication-year">2026</span>
+              <div class="publication-venue venue-blue">ICML</div>
+              <div class="publication-copy">
+                <h3>MMPD-Bench: Bridging Multimodal Fission with Multi-Polarimetric Modalities Decomposition</h3>
+                <p><strong>Yi He*</strong>, Z. Zhao*, Y. Yang, X. Cheng, C. He, Y. Hu</p>
+                <span data-i18n="publications.coauthor">* Equal contribution</span>
+              </div>
+              <a class="publication-arrow" href="https://mmpdbench.github.io/" target="_blank" rel="noreferrer" aria-label="Open MMPD-Bench project">↗</a>
+            </article>
+
+            <article class="publication-item reveal" data-featured="false">
+              <span class="publication-year">2026</span>
+              <div class="publication-venue venue-red">ICLR</div>
+              <div class="publication-copy">
+                <h3>Information Shapes Koopman Representation</h3>
+                <p>X. Cheng*, W. Yuan*, Y. Yang, Y. Zhang, S. Cheng, <strong>Y. He</strong>, Z. Sun</p>
+              </div>
+              <span class="publication-arrow is-muted">·</span>
+            </article>
+
+            <article class="publication-item reveal" data-featured="false">
+              <span class="publication-year">2026</span>
+              <div class="publication-venue venue-red">ICLR</div>
+              <div class="publication-copy">
+                <h3>Multilevel Control Functional</h3>
+                <p>K. Li, Y. Yang, X. Cheng, <strong>Y. He</strong>, Z. Sun</p>
+              </div>
+              <span class="publication-arrow is-muted">·</span>
+            </article>
+
+            <article class="publication-item reveal" data-featured="true">
+              <span class="publication-year">2025</span>
+              <div class="publication-venue venue-blue">ICML</div>
+              <div class="publication-copy">
+                <h3>Chaos Meets Attention: Transformers for Large-Scale Dynamical Prediction</h3>
+                <p><strong>Yi He*</strong>, Y. Yang*, X. Cheng*, H. Wang, X. Xue, B. Chen, Y. Hu</p>
+                <span data-i18n="publications.coauthor">* Equal contribution</span>
+              </div>
+              <a class="publication-arrow" href="https://github.com/Hy23333/ChaosMeetsAttention" target="_blank" rel="noreferrer" aria-label="Open Chaos Meets Attention repository">↗</a>
+            </article>
+
+            <article class="publication-item reveal" data-featured="false">
+              <span class="publication-year">2025</span>
+              <div class="publication-venue venue-blue">ICML</div>
+              <div class="publication-copy">
+                <h3>Tensor-Var: Efficient Four-Dimensional Variational Data Assimilation</h3>
+                <p>Y. Yang, X. Cheng, D. Giles, S. Cheng, <strong>Y. He</strong>, X. Xue, B. Cheng, Y. Hu</p>
+              </div>
+              <span class="publication-arrow is-muted">·</span>
+            </article>
+
+            <article class="publication-item reveal" data-featured="true">
+              <span class="publication-year">2024</span>
+              <div class="publication-venue venue-red">ICLR</div>
+              <div class="publication-copy">
+                <h3>Learning Chaos in a Linear Way</h3>
+                <p>X. Cheng*, <strong>Yi He*</strong>, Y. Yang, X. Xue, S. Cheng, D. Giles, X. Tang, Y. Hu</p>
+                <span data-i18n="publications.coauthor">* Equal contribution</span>
+              </div>
+              <a class="publication-arrow" href="https://github.com/Hy23333/PFNN" target="_blank" rel="noreferrer" aria-label="Open PFNN repository">↗</a>
+            </article>
+
+            <article class="publication-item reveal" data-featured="false">
+              <span class="publication-year">2026</span>
+              <div class="publication-venue venue-gold">PRE</div>
+              <div class="publication-copy">
+                <h3>On Stability and Robustness of Diffusion Posterior Sampling for Bayesian Inverse Problems</h3>
+                <p>Y. Yang, X. Cheng, <strong>Y. He</strong>, K. Li, W. Yuan, Z. Sun</p>
+                <span data-i18n="publications.preprint">Preprint</span>
+              </div>
+              <span class="publication-arrow is-muted">·</span>
+            </article>
+
+            <article class="publication-item reveal" data-featured="true">
+              <span class="publication-year">2026</span>
+              <div class="publication-venue venue-green">AEI</div>
+              <div class="publication-copy">
+                <h3>Constrained Factorized Dilated Temporal Convolutional Networks for Process Gases Management in Steel Manufacturing</h3>
+                <p><strong>Yi He</strong>, Y. Hu</p>
+                <span>Advanced Engineering Informatics</span>
+              </div>
+              <span class="publication-arrow is-muted">·</span>
+            </article>
+
+            <article class="publication-item reveal" data-featured="false">
+              <span class="publication-year">2021</span>
+              <div class="publication-venue venue-gold">IEEE</div>
+              <div class="publication-copy">
+                <h3>Radar Update: A Pedestrian Navigation System with Enhanced Trajectory Performance</h3>
+                <p>Y. Dai, K. Li, J. Chai, Z. Xiao, B. Yan, <strong>Y. He</strong>, W. Peng</p>
+                <span>ISCAS 2021 · Patent 20190876262.7</span>
+              </div>
+              <span class="publication-arrow is-muted">·</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section-shell experience-section">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-index">03</span>
+            <p class="eyebrow" data-i18n="experience.eyebrow">Trajectory</p>
+          </div>
+          <h2 data-i18n="experience.title">From physical systems to <em>learning systems.</em></h2>
+        </div>
+
+        <div class="experience-grid">
+          <div class="timeline reveal">
+            <h3 data-i18n="experience.research">Research & industry</h3>
+
+            <article class="timeline-item is-current">
+              <div class="timeline-date" data-i18n="experience.ucl.date">2024 — Present</div>
+              <div class="timeline-copy">
+                <h4 data-i18n="experience.ucl.role">Researcher · Dynamic Systems Lab, UCL</h4>
+                <p data-i18n="experience.ucl.desc">Leading AI4Science datasets and methodology benchmarks; publishing and maintaining PFNN, Chaos Meets Attention, and MMPD-Bench.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-date">2022 — 2024</div>
+              <div class="timeline-copy">
+                <h4 data-i18n="experience.swerim.role">Research Assistant · Swerim AB</h4>
+                <p data-i18n="experience.swerim.desc">Built a <strong class="trajectory-highlight">(multivariate) AI predictive agent</strong> and full data pipeline for process-gas management in steel manufacturing.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-date">2022 — 2023</div>
+              <div class="timeline-copy">
+                <h4 data-i18n="experience.ms.role">Software Engineer Track · Morgan Stanley UK</h4>
+                <p data-i18n="experience.ms.desc">Developed recommender systems, account databases, web applications, and backend programs in an agile workflow.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-date">2021</div>
+              <div class="timeline-copy">
+                <h4 data-i18n="experience.msc.role">MSc Research · UCL AI Centre</h4>
+                <p data-i18n="experience.msc.desc">Designed a graphical model for <strong class="trajectory-highlight">policy maximum-entropy variational reinforcement learning (RL)</strong>, advised by Prof. David Barber.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-date">2019</div>
+              <div class="timeline-copy">
+                <h4 data-i18n="experience.glasgow.role">Summer Research · University of Glasgow</h4>
+                <p data-i18n="experience.glasgow.desc">Explored signal imaging for human-gesture identification using SPFT and deep-learning classification.</p>
+              </div>
+            </article>
+          </div>
+
+          <aside class="education-panel reveal">
+            <div class="education-header">
+              <span data-i18n="experience.education">Education</span>
+              <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" /><path d="M14 28c8-14 16-18 24-10M14 35c8-9 16-11 24-4" /></svg>
+            </div>
+
+            <article>
+              <span>2023 — 2027/28</span>
+              <h4 data-i18n="education.phd">PhD · AI for Dynamical Systems</h4>
+              <p>University College London</p>
+              <em data-i18n="education.phdAward">Dean’s Prize Scholarship</em>
+            </article>
+            <article>
+              <span>2020 — 2021</span>
+              <h4 data-i18n="education.msc">MSc · Data Science & Machine Learning</h4>
+              <p>University College London</p>
+              <em data-i18n="education.mscAward">Distinction · Dean’s List</em>
+            </article>
+            <article>
+              <span>2016 — 2020</span>
+              <h4 data-i18n="education.beng">BEng (Hons) · Electronics & Electrical Engineering</h4>
+              <p>University of Glasgow</p>
+              <em data-i18n="education.bengAward">Academic Excellence Scholarship</em>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section id="talks" class="talks-section">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <div>
+              <span class="section-index">04</span>
+              <p class="eyebrow" data-i18n="talks.eyebrow">Speaking</p>
+            </div>
+            <h2 data-i18n="talks.title">Talks across research and <em>industry.</em></h2>
+          </div>
+
+          <div class="talk-list reveal">
+            <article>
+              <span class="talk-date">07 / 2025</span>
+              <div><h3 data-i18n="talks.jlr.title">AI Technology in Linearizing Nonlinear Systems</h3><p>Jaguar Land Rover · Warwick, UK</p></div>
+              <span class="talk-mark">01</span>
+            </article>
+            <article>
+              <span class="talk-date">07 / 2025</span>
+              <div><h3 data-i18n="talks.oxford.title">Foundation Models for AI for Science & Polarization Analysis</h3><p>University of Oxford · Vectorial Optics & Photonics Group</p></div>
+              <span class="talk-mark">02</span>
+            </article>
+            <article>
+              <span class="talk-date">04 / 2025</span>
+              <div><h3 data-i18n="talks.cege.title">Chaos and Nonlinear Dynamics — Three-Minute Paper</h3><p>University College London · CEGE</p></div>
+              <span class="talk-mark">03</span>
+            </article>
+            <article>
+              <span class="talk-date">04 / 2024</span>
+              <div><h3 data-i18n="talks.isi.title">AI for Energy-Intensive Digital Twins</h3><p>University College London · ISI Institute</p></div>
+              <span class="talk-mark">04</span>
+            </article>
+            <article>
+              <span class="talk-date">10 / 2023</span>
+              <div><h3 data-i18n="talks.swerim.title">Intelligent Digital Twins for Process Engineering</h3><p>Swerim · Luleå, Sweden</p></div>
+              <span class="talk-mark">05</span>
+            </article>
+            <article>
+              <span class="talk-date">08 / 2023</span>
+              <div><h3 data-i18n="talks.iceee.title">AI-Assisted Energy-Rich Gas Management</h3><p>ICEEE 2023 · London, UK</p></div>
+              <span class="talk-mark">06</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell beyond-section">
+        <div class="beyond-grid">
+          <div class="beyond-copy reveal">
+            <span class="section-index">05</span>
+            <p class="eyebrow" data-i18n="beyond.eyebrow">Beyond the lab</p>
+            <h2 data-i18n="beyond.title">Research engineer, builder, reviewer—and curious human.</h2>
+            <p data-i18n="beyond.desc">I volunteer on an LLM + RAG text-to-icon tool for special education, review for ICML, NeurIPS and ICLR, build LEGO, and chase snow across six mountains.</p>
+          </div>
+          <div class="skill-cloud reveal">
+            <span>PyTorch</span><span>JAX</span><span>NumPy</span><span>Cluster Computing</span><span>GCP</span><span>Azure</span><span>Git</span><span>Web Apps</span><span>SQL</span><span>Scientific Computing</span>
+          </div>
+        </div>
+        <div class="language-row reveal">
+          <span data-i18n="beyond.languages">Languages</span>
+          <div><strong data-i18n="language.mandarin">Mandarin</strong><em data-i18n="language.native">Native</em></div>
+          <div><strong data-i18n="language.english">English</strong><em data-i18n="language.professional">Professional</em></div>
+          <div><strong data-i18n="language.cantonese">Cantonese</strong><em data-i18n="language.basic">Basic</em></div>
+          <div><strong data-i18n="language.japanese">Japanese</strong><em data-i18n="language.basic">Basic</em></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <p class="eyebrow" data-i18n="footer.eyebrow">Let’s make complex systems legible.</p>
+          <h2 data-i18n="footer.title">Interested in world models, dynamics, or AI for science?</h2>
+          <a class="footer-email" href="mailto:heylly525@gmail.com">heylly525@gmail.com ↗</a>
+        </div>
+        <div class="footer-meta">
+          <a href="https://www.ucl.ac.uk/engineering/research/centres-institutes-and-labs/dynamic-systems-lab" target="_blank" rel="noreferrer">UCL Dynamic Systems Lab</a>
+          <a href="https://scholar.google.com/citations?user=l5goG-YAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="assets/Yi_He_CV_2026.pdf" target="_blank" rel="noreferrer" data-i18n="footer.download">Download CV</a>
+          <span>© <span id="current-year">2026</span> Yi He · 何怡</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
