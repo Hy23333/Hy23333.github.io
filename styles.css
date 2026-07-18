@@ -645,10 +645,22 @@ svg {
 .chaos-visual .chaos-line { stroke: url(#chaos-gradient); stroke-width: 4; }
 .chaos-visual .chaos-ghost { stroke: rgba(20, 25, 37, 0.25); stroke-width: 1.3; stroke-dasharray: 4 4; }
 
-.industry-visual { color: white; background: var(--vermillion); }
-.industry-visual .factory { fill: #18223e; stroke: #18223e; }
-.industry-visual .signal { stroke: var(--acid); stroke-width: 3; }
-.industry-visual circle { fill: var(--acid); stroke: none; }
+.industry-visual {
+  color: white;
+  background: #394750;
+}
+
+.industry-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.industry-visual .visual-code {
+  padding: 7px 9px;
+  background: rgba(20, 25, 37, 0.74);
+}
 
 .project-copy {
   align-self: end;
