@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://Hy23333.github.io/sitemap.xml
