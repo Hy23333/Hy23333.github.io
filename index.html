@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#f4f0e7" />
     <title>Yi He — AI for Dynamical Systems</title>
     <script>document.documentElement.classList.add("js");</script>
-    <link rel="stylesheet" href="styles.css?v=20260719b" />
+    <link rel="stylesheet" href="styles.css?v=20260719d" />
     <script src="script.js?v=20260719" defer></script>
   </head>
   <body>
@@ -126,16 +126,8 @@
 
         <div class="featured-projects">
           <article class="project-card project-card-large reveal">
-            <div class="project-visual polar-visual" aria-hidden="true">
-              <div class="polar-grid">
-                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <svg viewBox="0 0 320 210">
-                <path d="M42 112c38-75 89-85 128-28s78 58 112-21" />
-                <path d="M43 147c44-22 83-22 118 0 48 31 80 22 116-26" />
-                <circle cx="163" cy="106" r="54" />
-              </svg>
-              <span class="visual-code">S₀ → S₁, S₂, S₃</span>
+            <div class="project-visual mmpd-visual">
+              <img src="assets/mmpd-bench-design.png" alt="Diagram of the MMPD-Bench benchmark design, datasets, model families, evaluation protocols, and generated polarization modalities" />
             </div>
             <div class="project-copy">
               <div class="project-meta"><span>ICML 2026</span><span data-i18n="research.project1.tag">Multimodal benchmark</span></div>
@@ -149,14 +141,12 @@
           </article>
 
           <article class="project-card reveal">
-            <div class="project-visual chaos-visual" aria-hidden="true">
-              <svg viewBox="0 0 320 210">
-                <defs><linearGradient id="chaos-gradient" x1="0" x2="1"><stop stop-color="#ff6b4a" /><stop offset="1" stop-color="#3154d8" /></linearGradient></defs>
-                <path class="chaos-line" d="M24 110c18-70 42 82 61 9s36-69 57 6 41 68 61-3 37-75 55-8 26 51 39-27" />
-                <path class="chaos-ghost" d="M24 127c20-44 36 40 56 7s42-52 64 0 42 43 63-5 40-46 58-2 23 35 31-4" />
-                <line x1="24" y1="172" x2="298" y2="172" />
-              </svg>
-              <span class="visual-code">x<tspan>t+1</tspan> = F(x<tspan>t</tspan>)</span>
+            <div class="project-visual chaos-visual">
+              <div class="chaos-gif-strip">
+                <img src="assets/CMA_ground_truth.gif" alt="Animated ground-truth dynamical state sequence" loading="lazy" decoding="async" />
+                <img src="assets/PFNN_prediction.gif" alt="Animated PFNN prediction sequence" loading="lazy" decoding="async" />
+                <img src="assets/CMA_absolute_error.gif" alt="Animated absolute-error sequence" loading="lazy" decoding="async" />
+              </div>
             </div>
             <div class="project-copy">
               <div class="project-meta"><span>ICML 2025</span><span data-i18n="research.project2.tag">Dynamical prediction</span></div>
@@ -176,7 +166,7 @@
             </div>
             <div class="project-copy">
               <div class="project-meta"><span>AEI 2026</span><span data-i18n="research.project3.tag">Industrial AI</span></div>
-              <h3 data-i18n="research.project3.title">Intelligent Steel Systems</h3>
+              <h3 data-i18n="research.project3.title">Intelligent European Steel-Making Systems</h3>
               <p data-i18n="research.project3.desc">An end-to-end predictive pipeline for process-gas management—from forecasting and storage to real-time front-end reporting.</p>
               <div class="project-links"><span data-i18n="research.project3.outcome">Journal article · CiteScore 15.8</span></div>
             </div>
