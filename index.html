@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#f4f0e7" />
     <title>Yi He — AI for Dynamical Systems</title>
     <script>document.documentElement.classList.add("js");</script>
-    <link rel="stylesheet" href="styles.css?v=20260719c" />
+    <link rel="stylesheet" href="styles.css?v=20260719d" />
     <script src="script.js?v=20260719" defer></script>
   </head>
   <body>
@@ -141,14 +141,12 @@
           </article>
 
           <article class="project-card reveal">
-            <div class="project-visual chaos-visual" aria-hidden="true">
-              <svg viewBox="0 0 320 210">
-                <defs><linearGradient id="chaos-gradient" x1="0" x2="1"><stop stop-color="#ff6b4a" /><stop offset="1" stop-color="#3154d8" /></linearGradient></defs>
-                <path class="chaos-line" d="M24 110c18-70 42 82 61 9s36-69 57 6 41 68 61-3 37-75 55-8 26 51 39-27" />
-                <path class="chaos-ghost" d="M24 127c20-44 36 40 56 7s42-52 64 0 42 43 63-5 40-46 58-2 23 35 31-4" />
-                <line x1="24" y1="172" x2="298" y2="172" />
-              </svg>
-              <span class="visual-code">x<tspan>t+1</tspan> = F(x<tspan>t</tspan>)</span>
+            <div class="project-visual chaos-visual">
+              <div class="chaos-gif-strip">
+                <img src="assets/CMA_ground_truth.gif" alt="Animated ground-truth dynamical state sequence" loading="lazy" decoding="async" />
+                <img src="assets/PFNN_prediction.gif" alt="Animated PFNN prediction sequence" loading="lazy" decoding="async" />
+                <img src="assets/CMA_absolute_error.gif" alt="Animated absolute-error sequence" loading="lazy" decoding="async" />
+              </div>
             </div>
             <div class="project-copy">
               <div class="project-meta"><span>ICML 2025</span><span data-i18n="research.project2.tag">Dynamical prediction</span></div>

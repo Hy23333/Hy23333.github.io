@@ -18,4 +18,5 @@ Then open `http://localhost:4173`.
 - `assets/headshot.png` — profile portrait
 - `assets/mmpd-bench-design.png` — MMPD-Bench project diagram
 - `assets/intelligent-steel-systems.png` — steel-making project image
+- `assets/CMA_ground_truth.gif`, `assets/PFNN_prediction.gif`, `assets/CMA_absolute_error.gif` — Chaos Meets Attention animated comparison
 - `assets/Yi_He_CV_2026.pdf` — downloadable CV
