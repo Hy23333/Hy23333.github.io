@@ -587,8 +587,8 @@ svg {
 
 .project-card-large {
   grid-column: 1 / -1;
-  grid-template-columns: 1.15fr 0.85fr;
-  min-height: 450px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  min-height: 390px;
 }
 
 .project-visual {
@@ -624,15 +624,15 @@ svg {
 .mmpd-visual {
   display: grid;
   place-items: center;
-  padding: 18px;
+  padding: 8px;
   background: #f9f8fb;
 }
 
 .mmpd-visual img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  max-height: 100%;
 }
 
 .chaos-visual {
@@ -645,14 +645,26 @@ svg {
 .chaos-gif-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 3px;
+  gap: 5px;
   width: 100%;
 }
 
-.chaos-gif-strip img {
+.chaos-gif-frame {
+  position: relative;
+  aspect-ratio: 1.18;
+  overflow: hidden;
+  background: #fff;
+}
+
+.chaos-gif-frame img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: block;
-  width: 100%;
+  width: 132%;
+  max-width: none;
   height: auto;
+  transform: translate(-50%, -50%);
 }
 
 .industry-visual {
@@ -1191,6 +1203,9 @@ html[data-lang="zh"] .site-footer h2 {
   .hero { min-height: auto; grid-template-columns: 1fr 280px; padding-top: 82px; }
   .hero h1 { font-size: clamp(46px, 7vw, 64px); }
   .section-heading { grid-template-columns: 150px 1fr; }
+  .project-card-large { grid-template-columns: 1fr; min-height: 0; }
+  .project-card-large .project-visual { min-height: 0; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .project-card-large .mmpd-visual { aspect-ratio: 2604 / 1122; padding: 6px; }
   .experience-grid { gap: 45px; }
   .beyond-grid { gap: 55px; }
 }
@@ -1212,8 +1227,7 @@ html[data-lang="zh"] .site-footer h2 {
   .section-heading > div:first-child { margin-bottom: 28px; }
   .section-heading h2, .beyond-copy h2, .site-footer h2 { font-size: clamp(39px, 11vw, 54px); }
   .featured-projects { grid-template-columns: 1fr; }
-  .project-card-large { grid-column: auto; grid-template-columns: 1fr; }
-  .project-card-large .project-visual { min-height: 320px; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .project-card-large { grid-column: auto; }
   .project-card { min-height: 0; }
   .research-stats { grid-template-columns: repeat(2, 1fr); }
   .research-stats > div:nth-child(2) { border-right: 0; }
