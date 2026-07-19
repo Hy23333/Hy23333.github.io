@@ -16,5 +16,6 @@ Then open `http://localhost:4173`.
 - `styles.css` — responsive editorial design and motion
 - `script.js` — language switcher, publication filter, mobile navigation
 - `assets/headshot.png` — profile portrait
+- `assets/mmpd-bench-design.png` — MMPD-Bench project diagram
 - `assets/intelligent-steel-systems.png` — steel-making project image
 - `assets/Yi_He_CV_2026.pdf` — downloadable CV

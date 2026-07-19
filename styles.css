@@ -621,24 +621,19 @@ svg {
   letter-spacing: 0.12em;
 }
 
-.polar-visual {
-  color: white;
-  background: #19255e;
-}
-
-.polar-visual svg { stroke: rgba(255, 255, 255, 0.62); stroke-width: 1.2; }
-
-.polar-grid {
-  position: absolute;
-  inset: 0;
+.mmpd-visual {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  opacity: 0.5;
+  place-items: center;
+  padding: 18px;
+  background: #f9f8fb;
 }
 
-.polar-grid span:nth-child(3n + 1) { background: #2d45a9; }
-.polar-grid span:nth-child(3n + 2) { background: #d54f55; mix-blend-mode: screen; }
-.polar-grid span:nth-child(3n + 3) { background: #2ba9a0; mix-blend-mode: screen; }
+.mmpd-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 .chaos-visual { color: var(--ink); background: #dce4ff; }
 .chaos-visual svg { stroke-width: 1; stroke: rgba(20, 25, 37, 0.28); }
