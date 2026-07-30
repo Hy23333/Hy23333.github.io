@@ -18,11 +18,11 @@ const translations = {
       title: "Research that moves between <em>representation</em> and <em>reality.</em>",
       project1: { tag: "Multimodal benchmark", desc: "A benchmark that bridges multimodal fission through multi-polarimetric modality decomposition, with a public dataset and project ecosystem for the AI4Science community." },
       project2: { tag: "Time-series prediction", desc: "Transformers for large-scale multivariate spatiotemporal prediction, supported by high-resolution turbulent channel and Kolmogorov flow benchmarks." },
-      project3: { tag: "Industrial AI", title: "Intelligent Steel Systems", desc: "An end-to-end predictive pipeline for process-gas management—from forecasting and storage to real-time front-end reporting.", outcome: "Journal article · CiteScore 15.8" },
+      project3: { tag: "Industrial AI", title: "Intelligent European Steel-Making Systems", desc: "An end-to-end predictive pipeline for process-gas management—from forecasting and storage to real-time front-end reporting.", outcome: "Journal article · CiteScore 15.8" },
       stats: { data: "research data generated & maintained", lead: "ICML / ICLR papers led", talks: "invited and conference talks", phd: "expected PhD graduation" }
     },
     common: { project: "Project", dataset: "Dataset" },
-    publications: { eyebrow: "Research output", title: "Publications", highlighted: "Highlighted", all: "Full list", coauthor: "* Equal contribution", preprint: "Preprint" },
+    publications: { eyebrow: "Research output", title: "Publications", highlighted: "Highlighted", all: "Full list", preprint: "Preprint" },
     experience: {
       eyebrow: "Trajectory", title: "From physical systems to <em>learning systems.</em>", research: "Research & industry", education: "Education",
       ucl: { date: "2024 — Present", role: "Researcher · Dynamic Systems Lab, UCL", desc: "Leading AI4Science datasets and methodology benchmarks; publishing and maintaining PFNN, Chaos Meets Attention, and MMPD-Bench." },
@@ -68,11 +68,11 @@ const translations = {
       title: "在<em>表征</em>与<em>真实世界</em>之间穿行的研究。",
       project1: { tag: "多模态基准", desc: "通过多偏振模态分解连接多模态裂变，为 AI4Science 社区提供公开数据集与完整项目生态。" },
       project2: { tag: "时序预测", desc: "面向大规模多变量时空预测的 Transformer 方法，并构建高分辨率湍流通道流与 Kolmogorov 流基准。" },
-      project3: { tag: "工业智能", title: "智能钢铁系统", desc: "面向钢铁制造过程气体管理的端到端预测管线，覆盖预测、存储与实时前端报告。", outcome: "期刊论文 · CiteScore 15.8" },
+      project3: { tag: "工业智能", title: "智能欧洲特种钢铁制造系统", desc: "面向特殊钢铁制造过程气体管理的端到端预测管线，覆盖预测、存储与实时报告。", outcome: "期刊论文 · CiteScore 15.8" },
       stats: { data: "生成与维护的科研数据", lead: "主导 ICML / ICLR 论文", talks: "受邀及会议报告", phd: "预计博士毕业" }
     },
     common: { project: "项目主页", dataset: "数据集" },
-    publications: { eyebrow: "研究成果", title: "论文发表", highlighted: "代表作", all: "完整列表", coauthor: "* 共同一作", preprint: "预印本" },
+    publications: { eyebrow: "研究成果", title: "论文发表", highlighted: "代表作", all: "完整列表", preprint: "预印本" },
     experience: {
       eyebrow: "研究轨迹", title: "从物理系统走向<em>学习系统。</em>", research: "科研与产业经历", education: "教育经历",
       ucl: { date: "2024 — 至今", role: "研究员 · UCL 动态系统实验室", desc: "主导 AI4Science 数据集与方法基准，发布并维护 PFNN、Chaos Meets Attention 和 MMPD-Bench。" },
@@ -186,6 +186,13 @@ if ("IntersectionObserver" in window) {
 
 const savedLanguage = localStorage.getItem("yi-he-language");
 const preferredLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
-setLanguage(savedLanguage || preferredLanguage);
+const queryParameters = new URLSearchParams(window.location.search);
+const requestedLanguage = queryParameters.get("lang");
+
+if (queryParameters.get("pdf") === "1") {
+  document.querySelectorAll('img[loading="lazy"]').forEach((image) => image.setAttribute("loading", "eager"));
+}
+
+setLanguage(requestedLanguage || savedLanguage || preferredLanguage);
 document.querySelector('[data-filter="all"]').click();
 document.querySelector("#current-year").textContent = new Date().getFullYear();

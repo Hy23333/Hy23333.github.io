@@ -840,6 +840,8 @@ svg {
 
 .venue-blue { background: var(--cobalt); }
 .venue-red { background: var(--vermillion); }
+.venue-purple { background: #7b2cbf; }
+.venue-stacked { line-height: 1.05; text-align: center; }
 .venue-green { color: var(--ink); background: #75c8a0; }
 .venue-gold { color: var(--ink); background: #d9bf66; }
 
