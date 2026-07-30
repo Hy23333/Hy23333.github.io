@@ -1,0 +1,594 @@
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  :root {
+    --print-width: 297mm;
+    --print-height: 210mm;
+  }
+
+  html[data-lang="zh"] {
+    --serif: "Songti SC", "STSong", serif;
+    --sans: "Songti SC", "STSong", serif;
+    --mono: "Songti SC", "STSong", serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html,
+  body {
+    width: var(--print-width) !important;
+    min-width: var(--print-width) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--ink) !important;
+    background: var(--paper) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body::before,
+  .skip-link,
+  .site-header,
+  .mobile-nav,
+  .research-strip,
+  .publication-filter {
+    display: none !important;
+  }
+
+  .js .reveal,
+  .js .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  main,
+  .section-shell {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  main > section,
+  .site-footer {
+    position: relative !important;
+    width: var(--print-width) !important;
+    height: var(--print-height) !important;
+    min-height: var(--print-height) !important;
+    max-height: var(--print-height) !important;
+    padding: 12mm 14mm !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+
+  main > section::after,
+  .site-footer::after {
+    position: absolute;
+    right: 12mm;
+    bottom: 7mm;
+    color: rgba(20, 25, 37, 0.48);
+    font-family: var(--mono);
+    font-size: 7pt;
+    letter-spacing: 0.14em;
+  }
+
+  #top::after { content: "01 / 07  ·  PROFILE"; }
+  #research::after { content: "02 / 07  ·  RESEARCH"; }
+  #publications::after { color: rgba(255, 255, 255, 0.48); content: "03 / 07  ·  PUBLICATIONS"; }
+  #experience::after { content: "04 / 07  ·  EXPERIENCE"; }
+  #talks::after { content: "05 / 07  ·  TALKS"; }
+  .beyond-section::after { content: "06 / 07  ·  BEYOND THE LAB"; }
+  .site-footer::after { color: rgba(255, 255, 255, 0.48); content: "07 / 07  ·  CONTACT"; }
+
+  .section-heading {
+    grid-template-columns: 28mm minmax(0, 1fr) !important;
+    gap: 8mm !important;
+    margin: 0 0 6mm !important;
+  }
+
+  .section-index {
+    margin-bottom: 2mm !important;
+    font-size: 8pt !important;
+  }
+
+  .eyebrow {
+    font-size: 7pt !important;
+    letter-spacing: 0.13em !important;
+  }
+
+  .section-heading h2,
+  .beyond-copy h2,
+  .site-footer h2 {
+    font-size: 27pt !important;
+    line-height: 1.02 !important;
+  }
+
+  /* Page 1: profile */
+  #top.hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 64mm !important;
+    gap: 16mm !important;
+    align-items: center !important;
+    padding: 18mm 20mm !important;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1 {
+    gap: 5mm !important;
+    margin: 4mm 0 7mm !important;
+    font-size: 58pt !important;
+    line-height: 0.95 !important;
+  }
+
+  .hero h1 em {
+    font-size: 24pt !important;
+  }
+
+  .hero-bio {
+    max-width: 175mm !important;
+  }
+
+  .hero-status {
+    margin: 0 0 4mm !important;
+    padding-top: 5mm !important;
+    font-size: 14pt !important;
+    line-height: 1.45 !important;
+  }
+
+  .hero-intro {
+    max-width: 168mm !important;
+    font-size: 9pt !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-topics {
+    gap: 2mm !important;
+    margin-top: 6mm !important;
+  }
+
+  .hero-topics span {
+    padding: 2mm 3mm !important;
+    font-size: 7pt !important;
+  }
+
+  .hero-links {
+    gap: 6mm !important;
+    margin-top: 6mm !important;
+    font-size: 8pt !important;
+  }
+
+  .hero-links .primary-link {
+    padding: 3mm 5mm !important;
+    color: #fff !important;
+  }
+
+  .hero-links .primary-link svg {
+    stroke: #fff !important;
+  }
+
+  .hero-profile {
+    width: 64mm !important;
+  }
+
+  .headshot-frame {
+    padding: 3mm !important;
+  }
+
+  .profile-caption {
+    padding: 4mm 0 3mm !important;
+  }
+
+  .profile-caption strong {
+    font-size: 20pt !important;
+  }
+
+  .profile-caption p {
+    max-width: 34mm !important;
+    font-size: 7pt !important;
+  }
+
+  .hero-orbit {
+    top: 25mm !important;
+    right: 50mm !important;
+    width: 105mm !important;
+    opacity: 0.22 !important;
+  }
+
+  /* Page 2: research */
+  #research.research-section {
+    padding-top: 10mm !important;
+  }
+
+  #research .section-heading {
+    margin-bottom: 4mm !important;
+  }
+
+  #research .section-heading h2 {
+    font-size: 22pt !important;
+  }
+
+  .featured-projects {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: 61mm 62mm !important;
+    gap: 4mm !important;
+  }
+
+  .project-card,
+  .project-card-large {
+    min-height: 0 !important;
+    height: 100% !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .project-card-large {
+    grid-column: 1 / -1 !important;
+    grid-template-columns: 1.35fr 0.65fr !important;
+  }
+
+  .project-card-large .project-visual {
+    min-height: 0 !important;
+    border-right: 1px solid var(--ink) !important;
+    border-bottom: 0 !important;
+  }
+
+  .project-card:not(.project-card-large) {
+    grid-template-rows: 32mm 30mm !important;
+  }
+
+  .project-visual {
+    min-height: 0 !important;
+  }
+
+  .mmpd-visual {
+    aspect-ratio: auto !important;
+    padding: 2mm !important;
+  }
+
+  .mmpd-visual img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    transform: scale(0.65) !important;
+  }
+
+  .chaos-visual {
+    padding: 1mm !important;
+  }
+
+  .chaos-gif-strip {
+    gap: 1mm !important;
+  }
+
+  .industry-visual .visual-code {
+    right: 3mm !important;
+    bottom: 2mm !important;
+    padding: 1.5mm 2mm !important;
+    font-size: 6pt !important;
+  }
+
+  .project-copy {
+    align-self: stretch !important;
+    padding: 3mm 4mm !important;
+  }
+
+  .project-meta {
+    gap: 3mm !important;
+    padding-bottom: 2mm !important;
+    font-size: 6pt !important;
+  }
+
+  .project-copy h3 {
+    margin: 2mm 0 1.5mm !important;
+    font-size: 15pt !important;
+    line-height: 1.05 !important;
+  }
+
+  .project-copy p {
+    margin: 0 !important;
+    font-size: 7pt !important;
+    line-height: 1.35 !important;
+  }
+
+  .project-links {
+    gap: 4mm !important;
+    margin-top: 2mm !important;
+    font-size: 6.5pt !important;
+  }
+
+  .research-stats {
+    height: 15mm !important;
+    margin-top: 4mm !important;
+  }
+
+  .research-stats > div {
+    min-height: 0 !important;
+    padding: 2mm 4mm !important;
+  }
+
+  .research-stats strong {
+    font-size: 14pt !important;
+  }
+
+  .research-stats span {
+    font-size: 6pt !important;
+  }
+
+  /* Page 3: publications */
+  #publications.publication-section {
+    padding-top: 10mm !important;
+  }
+
+  .publication-section > .section-shell,
+  .talks-section > .section-shell,
+  .site-footer > .section-shell {
+    height: 100% !important;
+    padding: 0 !important;
+  }
+
+  .publication-heading {
+    margin-bottom: 4mm !important;
+  }
+
+  .publication-heading h2 {
+    font-size: 28pt !important;
+  }
+
+  .publication-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
+    gap: 3mm !important;
+    height: 158mm !important;
+    border: 0 !important;
+  }
+
+  .publication-item {
+    position: relative !important;
+    display: block !important;
+    min-height: 0 !important;
+    padding: 3mm !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.24) !important;
+  }
+
+  .publication-year {
+    display: inline-block !important;
+    margin-right: 3mm !important;
+    font-size: 7pt !important;
+  }
+
+  .publication-venue {
+    display: inline-grid !important;
+    float: right !important;
+    width: 13mm !important;
+    height: 7mm !important;
+    font-size: 6pt !important;
+  }
+
+  .publication-copy {
+    margin-top: 3mm !important;
+  }
+
+  .publication-copy h3 {
+    margin: 0 0 2mm !important;
+    font-size: 9pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .publication-copy p,
+  .publication-copy > span {
+    margin: 0 !important;
+    font-size: 6.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  .publication-arrow {
+    display: none !important;
+  }
+
+  /* Page 4: experience */
+  #experience.experience-section {
+    padding-top: 11mm !important;
+  }
+
+  #experience .section-heading {
+    margin-bottom: 5mm !important;
+  }
+
+  .experience-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.75fr) !important;
+    gap: 9mm !important;
+    height: 151mm !important;
+  }
+
+  .timeline h3 {
+    margin: 0 0 2mm !important;
+    font-size: 10pt !important;
+  }
+
+  .timeline-item {
+    grid-template-columns: 28mm minmax(0, 1fr) !important;
+    gap: 4mm !important;
+    padding: 3mm 0 3mm 5mm !important;
+  }
+
+  .timeline-date {
+    font-size: 6.5pt !important;
+  }
+
+  .timeline-copy h4 {
+    margin-bottom: 1mm !important;
+    font-size: 9pt !important;
+  }
+
+  .timeline-copy p {
+    font-size: 7pt !important;
+    line-height: 1.35 !important;
+  }
+
+  .education-panel {
+    padding: 5mm !important;
+  }
+
+  .education-header {
+    margin-bottom: 3mm !important;
+    font-size: 8pt !important;
+  }
+
+  .education-header svg {
+    width: 12mm !important;
+  }
+
+  .education-panel article {
+    padding: 4mm 0 !important;
+  }
+
+  .education-panel article > span,
+  .education-panel p,
+  .education-panel em {
+    font-size: 6.5pt !important;
+  }
+
+  .education-panel h4 {
+    margin: 1.5mm 0 1mm !important;
+    font-size: 10pt !important;
+  }
+
+  /* Page 5: talks */
+  #talks.talks-section {
+    padding-top: 11mm !important;
+  }
+
+  #talks .section-heading {
+    margin-bottom: 5mm !important;
+  }
+
+  .talk-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+    gap: 4mm !important;
+    height: 145mm !important;
+    border-top: 0 !important;
+  }
+
+  .talk-list article {
+    grid-template-columns: 22mm minmax(0, 1fr) !important;
+    gap: 4mm !important;
+    align-content: center !important;
+    padding: 4mm !important;
+    border: 1px solid var(--line) !important;
+  }
+
+  .talk-date,
+  .talk-mark {
+    font-size: 7pt !important;
+  }
+
+  .talk-list h3 {
+    margin: 0 0 1mm !important;
+    font-size: 12pt !important;
+  }
+
+  .talk-list p {
+    font-size: 7pt !important;
+  }
+
+  .talk-mark {
+    display: none !important;
+  }
+
+  /* Page 6: beyond the lab */
+  .beyond-section {
+    padding: 18mm 20mm !important;
+  }
+
+  .beyond-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) !important;
+    gap: 15mm !important;
+    align-items: center !important;
+    min-height: 102mm !important;
+  }
+
+  .beyond-copy h2 {
+    margin: 5mm 0 !important;
+    font-size: 34pt !important;
+  }
+
+  .beyond-copy > p:last-child {
+    max-width: 140mm !important;
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+  }
+
+  .skill-cloud {
+    gap: 3mm !important;
+  }
+
+  .skill-cloud span {
+    padding: 3mm 4mm !important;
+    font-size: 8pt !important;
+  }
+
+  .language-row {
+    grid-template-columns: 28mm repeat(4, 1fr) !important;
+    gap: 3mm !important;
+    padding-top: 4mm !important;
+  }
+
+  .language-row > span,
+  .language-row strong,
+  .language-row em {
+    font-size: 7pt !important;
+  }
+
+  /* Page 7: contact */
+  .site-footer {
+    padding: 28mm 24mm !important;
+    break-after: auto !important;
+    page-break-after: auto !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr) !important;
+    gap: 20mm !important;
+    align-items: center !important;
+  }
+
+  .site-footer h2 {
+    max-width: 175mm !important;
+    margin: 5mm 0 10mm !important;
+    font-size: 44pt !important;
+  }
+
+  .footer-email {
+    font-size: 18pt !important;
+  }
+
+  .footer-meta {
+    gap: 5mm !important;
+    font-size: 9pt !important;
+  }
+}

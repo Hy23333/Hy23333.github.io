@@ -22,7 +22,7 @@ const translations = {
       stats: { data: "research data generated & maintained", lead: "ICML / ICLR papers led", talks: "invited and conference talks", phd: "expected PhD graduation" }
     },
     common: { project: "Project", dataset: "Dataset" },
-    publications: { eyebrow: "Research output", title: "Publications", highlighted: "Highlighted", all: "Full list", coauthor: "* Equal contribution", preprint: "Preprint" },
+    publications: { eyebrow: "Research output", title: "Publications", highlighted: "Highlighted", all: "Full list", preprint: "Preprint" },
     experience: {
       eyebrow: "Trajectory", title: "From physical systems to <em>learning systems.</em>", research: "Research & industry", education: "Education",
       ucl: { date: "2024 — Present", role: "Researcher · Dynamic Systems Lab, UCL", desc: "Leading AI4Science datasets and methodology benchmarks; publishing and maintaining PFNN, Chaos Meets Attention, and MMPD-Bench." },
@@ -72,7 +72,7 @@ const translations = {
       stats: { data: "生成与维护的科研数据", lead: "主导 ICML / ICLR 论文", talks: "受邀及会议报告", phd: "预计博士毕业" }
     },
     common: { project: "项目主页", dataset: "数据集" },
-    publications: { eyebrow: "研究成果", title: "论文发表", highlighted: "代表作", all: "完整列表", coauthor: "* 共同一作", preprint: "预印本" },
+    publications: { eyebrow: "研究成果", title: "论文发表", highlighted: "代表作", all: "完整列表", preprint: "预印本" },
     experience: {
       eyebrow: "研究轨迹", title: "从物理系统走向<em>学习系统。</em>", research: "科研与产业经历", education: "教育经历",
       ucl: { date: "2024 — 至今", role: "研究员 · UCL 动态系统实验室", desc: "主导 AI4Science 数据集与方法基准，发布并维护 PFNN、Chaos Meets Attention 和 MMPD-Bench。" },
@@ -186,6 +186,13 @@ if ("IntersectionObserver" in window) {
 
 const savedLanguage = localStorage.getItem("yi-he-language");
 const preferredLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
-setLanguage(savedLanguage || preferredLanguage);
+const queryParameters = new URLSearchParams(window.location.search);
+const requestedLanguage = queryParameters.get("lang");
+
+if (queryParameters.get("pdf") === "1") {
+  document.querySelectorAll('img[loading="lazy"]').forEach((image) => image.setAttribute("loading", "eager"));
+}
+
+setLanguage(requestedLanguage || savedLanguage || preferredLanguage);
 document.querySelector('[data-filter="all"]').click();
 document.querySelector("#current-year").textContent = new Date().getFullYear();
